@@ -12,7 +12,9 @@ public boolean deleteAtPosition(int position) {
 			if(head.getNext()==null){
 				head = null;
 				return true;
-			} else {
+			} 
+			else 
+			{
 				Node current = this.head;
 				Node previous = this.head;
 				int counter = 0;
