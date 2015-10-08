@@ -6,15 +6,21 @@ public boolean deleteAtPosition(int position) {
 			return deleteBack();
 		}
 		
-		if(this.head == null)
+		if (position == 0){
+			return deleteFront();
+		}
+		if (position == this.length()-1){
+			return deleteBack();
+		}
+		
+		if(this.head == null && this.tail == null)
 			return false;
 		else{
 			if(head.getNext()==null){
 				head = null;
+				tail = null;
 				return true;
-			} 
-			else 
-			{
+			} else {
 				Node current = this.head;
 				Node previous = this.head;
 				int counter = 0;
