@@ -9,8 +9,9 @@ public void addAtPosition(Object data, int position) {
 		}
 
 		Node newNode = new Node(data);
-		if (this.head == null) {
+		if (this.head == null && this.tail == null) {
 			this.head = newNode;
+			this.tail = newNode;
 		} else {
 			Node current = this.head;
 			Node previous = this.head;
