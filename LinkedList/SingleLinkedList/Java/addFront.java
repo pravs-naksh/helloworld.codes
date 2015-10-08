@@ -1,6 +1,6 @@
 public void addFront(Object data) {
 		Node newNode = new Node(data);
-		if(this.head==null){
+		if(this.head==null && this.tail == null){
 			this.head = newNode;
 			this.tail = newNode;
 		} else {
