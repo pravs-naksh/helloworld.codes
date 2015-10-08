@@ -1,15 +1,11 @@
 public void addBack(Object data) {
 		Node newNode = new Node(data);
-		if(this.head==null){
+		if (this.head == null && this.tail == null) {
 			this.head = newNode;
+			this.tail = newNode;
 		} else {
-			Node current = this.head;
-			while(current!=null){
-				if(current.getNext()==null){
-					current.setNext(newNode);
-					break;
-				}
-				current = current.getNext();
-			}
+			Node tempTail = this.tail;
+			tempTail.setNext(newNode);
+			this.tail = newNode;
 		}
 }
