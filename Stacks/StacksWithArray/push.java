@@ -1,5 +1,5 @@
 public void push(Object dataIn) {
-	if (this.top == this.capacity) {
+	if (this.isFull()) {
 		System.out.println("Stack full!");
 		return;
 	}
