@@ -7,7 +7,7 @@ class Node {
 void inOrder(Node root) {
     if(root == null) return;
   
-    preOrder(root.left);
+    inOrder(root.left);
     System.out.print(root.data+" ");
-    preOrder(root.right);
+    inOrder(root.right);
 }
