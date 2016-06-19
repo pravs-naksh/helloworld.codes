@@ -1,11 +1,11 @@
-struct Node{
+struct node{
   int data;
-  struct Node * left;
-  struct Node * right;
+  struct node* left;
+  struct node* right;
 };
 
 
-void postOrder(Node * root){
+void postOrder(node* root){
   if(root == NULL) return;
   postOrder(root->left);
   postOrder(root->right);
